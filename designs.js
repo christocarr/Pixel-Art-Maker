@@ -16,12 +16,13 @@ $(document).ready(function() {
 	// When size is submitted by the user, call makeGrid()
 
 	function makeGrid(gridHeight, gridWidth) {
-		console.log(gridHeight);
-		for (let x = 0; x < gridWidth; x++) {
+		let grid;
+		for (let x = 0; x < gridWidth; ++x) {
+			grid += '<tr></tr>';
 			for (let y = 0; y < gridHeight; y++) {
-				gridTable.append("<tr><td></td></tr/>");
+				grid += '<td></td>';
 			}
 		}
-
+		gridTable.html(grid);
 	}
 })
