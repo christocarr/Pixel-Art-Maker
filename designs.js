@@ -3,7 +3,7 @@ $(document).ready(function() {
 	// Select size input
 
 	const submit = $(':submit');
-
+	const gridLimit = 30;
 	const gridTable = $('#pixel_canvas');
 
 	submit.click(function(event) {
@@ -17,12 +17,28 @@ $(document).ready(function() {
 
 	function makeGrid(gridHeight, gridWidth) {
 		let grid;
-		for (let x = 0; x < gridWidth; ++x) {
-			grid += '<tr></tr>';
-			for (let y = 0; y < gridHeight; y++) {
-				grid += '<td></td>';
+		
+		if (gridHeight <= gridLimit && gridWidth <= gridLimit){
+			
+			for (let x = 0; x < gridWidth; ++x) {
+				grid += '<tr>';
+				for (let y = 0; y < gridHeight; y++) {
+					grid += '<td></td>';
+				}
+				grid += '</tr>'
 			}
+			gridTable.html(grid);
+			
+		} else {
+			gridTable.html('Grid height and width is 30 max!. Please adjust the input.');
 		}
-		gridTable.html(grid);
 	}
+	
+	const tableCell = $('.tableCell');
+	
+	gridTable.on('mousedown', function(event){
+		event.stopPropagation;
+		const color = $('#colorPicker').val();
+	});
+							 
 })
