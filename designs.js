@@ -34,9 +34,17 @@ $(document).ready(function() {
 		}
 	}
 	
-	//set the background color of the table cell when 
+	//set the background color of the table cell when clicked. click again to clear
 	GRID_TABLE.on('mousedown', 'td', function(event){
-		$(this).css('background-color', $('#colorPicker').val());
+		
+		const colorValue = $(this).css('background-color');
+		
+		if (colorValue === 'rgba(0, 0, 0, 0)') {
+			$(this).css('background-color', $('#colorPicker').val());
+		} else {
+			$(this).css('background-color', '');
+		}
+		
 	});
 							 
 })
