@@ -20,9 +20,9 @@ $(document).ready(function() {
 		
 		if (GRID_HEIGHT <= GRID_LIMIT && GRID_WIDTH <= GRID_LIMIT){
 			
-			for (let x = 0; x < GRID_WIDTH; ++x) {
+			for (let x = 0; x < GRID_HEIGHT; ++x) {
 				grid += '<tr>';
-				for (let y = 0; y < GRID_HEIGHT; y++) {
+				for (let y = 0; y < GRID_WIDTH; y++) {
 					grid += '<td></td>';
 				}
 				grid += '</tr>'
