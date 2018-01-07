@@ -1,3 +1,9 @@
+The final project in the first phase of the Udacity Scholarship challenge 2017/2018
+
+*HTML
+*CSS
+*jQuery
+
 # Pixel Art Maker Project
 
 ## Table of Contents
