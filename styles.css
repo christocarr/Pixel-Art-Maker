@@ -3,12 +3,13 @@ body {
 }
 
 h1 {
-    font-family: Monoton;
+    font-family: 'VT323', 'open-sans', monospace;
     font-size: 70px;
     margin: 0.2em;
 }
 
 h2 {
+		font-family: 'open-sans', monospace;
     margin: 1em 0 0.25em;
 }
 
@@ -16,10 +17,15 @@ h2:first-of-type {
     margin-top: 0.5em;
 }
 
+form {
+	font-family: 'open-sans', monospace;
+}
+
 table,
 tr,
 td {
     border: 1px solid black;
+		
 }
 
 table {
@@ -33,6 +39,10 @@ tr {
 
 td {
     width: 20px;
+}
+
+table:hover {
+	cursor: pointer;
 }
 
 input[type=number] {
